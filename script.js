@@ -1,8 +1,9 @@
 function validarTexto (texto) {
-    let caracteres = /[~!@#$%^&*()_+|}{[\]\\\/?><:"`;.,áéíóúàèìòù']/g;
-    let mayusculas = /[A-Z]/g;  
+    let caracteres = /[~!@#$%^&*()_+|}{[/?><:"`;.,áéíóúàèìòù']/g;
+    let mayusculas = /[A-Z]/g;
+    let numeros = /[0-9]/g;  
     let vacio="";  
-    if(texto.match(mayusculas)||texto.match(caracteres)){
+    if(texto.match(mayusculas)||texto.match(caracteres)||texto.match(numeros)){
         document.getElementById('instrucciones').style.color = '#EE0000';
         return true; 
     } else if(texto==vacio){
@@ -12,7 +13,6 @@ function validarTexto (texto) {
         return false;
     }
 }
-
 let btnEncriptar = document.querySelector("#btn-encriptar");
 
 btnEncriptar.addEventListener("click",function ()  {
@@ -51,9 +51,13 @@ let btnDesencriptar = document.querySelector("#btn-desencriptar");
 
 btnDesencriptar.addEventListener("click", function(){
     let textoIngresado = document.querySelector("#input-texto").value;
-    let Desencriptado = desencriptar(textoIngresado);
-    let resultado = document.querySelector("#msg");
-    resultado.value = Desencriptado;
+    if (validarTexto(textoIngresado) == false) {
+        let Desencriptado = desencriptar(textoIngresado);
+        let resultado = document.querySelector("#msg");
+        resultado.value = Desencriptado;
+    } else {
+        document.querySelector("#input-texto").value = "";
+    }
 })
 
 function desencriptar (textoIngresado) {

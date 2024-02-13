@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="titulo">< encriptador de texto ></h1>
+    </header>
+    <main>
+        <div class="form box">
+            <form action="">
+                <label for="input-texto" class="lab"></label>
+                <textarea class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingresa el texto"></textarea>
+            </form>
+        </div>
+        <div class="btns-funcionales">
+            <input class="btn" type="button" value="Encriptar" id="btn-encriptar">
+            <input class="btn" type="button" value="Desencriptar" id="btn-desencriptar">
+        </div>
+        <div>
+            <p id="instrucciones"> -?- solo se permiten caracteres en minuscula [a-z]</p>
+        </div>
+        <div class="msg box">
+            <label for="input-texto" class="lab"></label>
+                <textarea class="text-input" type="text" id="msg" placeholder="Aquí aparecerá tu mensaje encriptado" readonly="readonly"></textarea>
+        </div>
+        <div class="copiar">
+            <input class="btn" type="button" value="Copia el mensaje" id="btn-copy">
+        </div>
+    </main>
+    <footer>
+        &copy Desarrollado por Jonatan F. Salahub - Febrero 2024
+        <br>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -71,8 +71,8 @@ main {
 
 .text-input {
     border-radius: 30px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
     vertical-align: center;
     display: flexbox;
     border: 3px solid rgba(0, 120, 0, 0.2);

@@ -9,7 +9,7 @@
 }
 
 body{
-    background: url(img/bg.jpg)
+    background: url(img/bg.jpg) #1B1919;
 }
 
 header {
@@ -71,7 +71,8 @@ main {
 
 .text-input {
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     vertical-align: center;
     display: flexbox;
     border: 3px solid rgba(0, 120, 0, 0.2);
